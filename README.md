@@ -1,22 +1,28 @@
-# TCP File Transfer with Checksum and Sequence Numbers
+# Classic File Transfer with Chunk Handling, Sequence Numbers and Verification
 
-This program implements a reliable TCP file transfer mechanism that ensures no data loss or corruption during the transfer process. The client sends a file to the server using TCP sockets, with sequence numbers for chunk ordering and SHA-256 checksum verification for data integrity. If any issues occur during the transfer, an error message is displayed, and the file is not processed.
+This project demonstrates a client-server file transfer system where:
+
+-The client sends an entire file to the server.
+
+-The server splits the file into smaller chunks, assigns each chunk a sequence number, and sends these chunks back to the client.
+
+-The client reassembles the chunks in the correct order and verifies the integrity of the reassembled file using a checksum.
 
 ## 🚀 Features:
-- **Fully Reliable**: No packet loss or corruption.
-- **TCP Sockets**: Ensures error-free transmission.
-- **Sequence Numbers**: Ensures chunks are received in the correct order.
-- **Checksum Verification**: Uses SHA-256 to verify the integrity of the transferred file.
+- **Reliable file transfer** with acknowledgment (ACK) handling for each chunk.
+- **Checksum verification** to ensure file integrity during transfer.
+- **Robust error handling** to manage unexpected data formats or connection issues.
+- **Sequential reassembly** of file chunks to match original file order.
 - **Error Detection**: Displays an error message if missing or corrupted data is detected.
-
-## 📋 Requirements:
-- Python 3.x
-- `tqdm` for progress bar (can be installed via `pip install tqdm`)
 
 ## 📂 File Structure:
 - `client.py`: The client-side script that sends the file.
 - `server.py`: The server-side script that receives the file.
 
+## Configuration
+-`BUFFER_SIZE`: Size of each chunk sent by the server. Default is 1024 bytes (1KB).
+
+-`SERVER_ADDRESS`: The IP and port where the server listens (127.0.0.1:12345).
 ## 🛠 How to Run:
 
 ### Step 1: Start the Server
