@@ -33,5 +33,6 @@ python server.py
 ```
 ### step 2:start the client
 - The client uploads a specified file (dataset.txt), receives it back in chunks from the server, reassembles it, and checks the checksum.
+- The size of the Transmitted file **dataset.txt is 15.04MB**
 ```bash
 python client.py
