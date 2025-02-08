@@ -32,6 +32,6 @@ Open a terminal window and run the following command to start the server:
 python server.py
 ```
 ### step 2:start the client
-- The client uploads a specified file (friends-final3.txt), receives it back in chunks from the server, reassembles it, and checks the checksum.
+- The client uploads a specified file (dataset.txt), receives it back in chunks from the server, reassembles it, and checks the checksum.
 ```bash
 python client.py
