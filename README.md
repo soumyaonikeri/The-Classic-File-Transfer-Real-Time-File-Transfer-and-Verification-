@@ -27,8 +27,11 @@ This project demonstrates a client-server file transfer system where:
 
 ### Step 1: Start the Server
 Open a terminal window and run the following command to start the server:
-### step 2:start the client
+- The server listens on 127.0.0.1:12345 and waits for incoming client connections.
 ```bash
 python server.py
-
+```
+### step 2:start the client
+- The client uploads a specified file (friends-final3.txt), receives it back in chunks from the server, reassembles it, and checks the checksum.
+```bash
 python client.py
