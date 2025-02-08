@@ -9,8 +9,8 @@ This project demonstrates a client-server file transfer system where:
 -The client reassembles the chunks in the correct order and verifies the integrity of the reassembled file using a checksum.
 
 ## Features:
-- **Reliable file transfer** with acknowledgment (ACK) handling for each chunk.
-- **Checksum verification** to ensure file integrity during transfer.
+- **Reliable file transfer** with acknowledgment (ACK) handling for each chunk(TCP sockets).
+- **Checksum verification** to ensure file integrity during transfer(SHA-256).
 - **Robust error handling** to manage unexpected data formats or connection issues.
 - **Sequential reassembly** of file chunks to match original file order.
 - **Error Detection**: Displays an error message if missing or corrupted data is detected.
